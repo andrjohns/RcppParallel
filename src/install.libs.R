@@ -232,7 +232,7 @@ splitCompilerVar <- function(compilerVar, flagsVar) {
 forwardEnvVar <- function(envVar, cmakeVar) {
    envVal <- Sys.getenv(envVar, unset = NA)
    if (!is.na(envVal)) {
-      sprintf("-D%s=%s", cmakeVar, shQuote(envVal))
+      sprintf("-D%s=%s", cmakeVar, envVal)
    }
 }
 
