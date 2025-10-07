@@ -24,7 +24,7 @@ tbbLibraryPath <- function(name = NULL) {
    # form library names
    tbbLibNames <- list(
       "Darwin"  = paste0("lib", name, ".dylib"),
-      "Windows" = paste0(       name, ".dll"),
+      "Windows" = paste0("lib", name, c("12", ""), ".a"),
       "SunOS"   = paste0("lib", name, ".so"),
       "Linux"   = paste0("lib", name, c(".so.2", ".so"))
    )
